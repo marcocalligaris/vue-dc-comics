@@ -40,6 +40,10 @@ export default {
         align-items: center;
     }
 
+    header figure img {
+        display: block;
+    }
+
     header nav ul {
         display: flex;
     }

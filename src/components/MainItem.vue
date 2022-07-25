@@ -31,7 +31,8 @@ export default {
         padding: 40px 0;
     }
     #links-section {
-        height: 120px;
+        height: 200px;
         background-color: #0282F9;
+        position: relative;
     }
 </style>
