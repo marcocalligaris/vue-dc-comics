@@ -1,16 +1,18 @@
 <template>
-<div class="footer-top">
-    <div class="container">
-
+    <div>
+        <div class="footer-top">
+            <div class="container">
+        
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <nav>
+                    <button type="submit">SIGN-UP NOW!</button>
+                </nav>
+            </div>
+        </div>
     </div>
-</div>
-<div class="footer-bottom">
-    <div class="container">
-        <nav>
-            <button type="submit">SIGN-UP NOW!</button>
-        </nav>
-    </div>
-</div>
 </template>
 
 <script>
