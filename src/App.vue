@@ -2,18 +2,20 @@
   <div>
     <HeaderItem />
     <MainItem />
-    <footer></footer>
+    <FooterItem />
   </div>
 </template>
 
 <script>
 import HeaderItem from './components/HeaderItem.vue';
 import MainItem from './components/MainItem.vue';
+import FooterItem from './components/FooterItem.vue';
 export default {
   name: 'DcComics',
   components: {
     HeaderItem,
     MainItem,
+    FooterItem,
   },
 }
 </script>
