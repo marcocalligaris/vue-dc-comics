@@ -35,6 +35,8 @@ footer {
 }
 .footer-bottom nav button {
     border: solid 2px #0282F9;
+    background-color: transparent;
+    color: white;
     padding: 10px;
 }
 </style>

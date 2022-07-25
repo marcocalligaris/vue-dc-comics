@@ -32,7 +32,6 @@ export default {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     min-height: 100vh;
     background-color: black;
-    padding: 50px 0;
   }
 
   img {
