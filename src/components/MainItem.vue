@@ -1,11 +1,15 @@
 <template>
     <main>
-        <section id="generic-content">
-            <div class="container">
+        <div id="jumbotron"></div>
+        <section>
+            <div class="container" id="current-series">
+                <div>
+                <h3>CURRENT SERIES</h3>
+                </div>
                 <h1>--> Content goes here</h1>
             </div>
         </section>
-        <section id="links-section">
+        <section id="banner">
             <div class="container">
                 <nav>
                     <ul>
@@ -23,15 +27,21 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
     main {
         color: white;
+        #jumbotron {
+            background-image: url(../assets/img/jumbotron.jpg);
+            background-size: cover;
+            height: 400px;
+        }
+
     }
-    #generic-content {
+
+
+    #banner {
         padding: 40px 0;
-    }
-    #links-section {
-        height: 200px;
+        height: 150px;
         background-color: #0282F9;
         position: relative;
     }
