@@ -6,16 +6,13 @@
             </figure>
             <nav>
                 <ul>
-                    <li><a href="#">CHARACTERS</a></li>
-                    <li><a href="#" class="active">COMICS</a></li>
-                    <li><a href="#">MOVIES</a></li>
-                    <li><a href="#">TV</a></li>
-                    <li><a href="#">GAMES</a></li>
-                    <li><a href="#">COLLECTIBLES</a></li>
-                    <li><a href="#">VIDEOS</a></li>
-                    <li><a href="#">FANS</a></li>
-                    <li><a href="#">NEWS</a></li>
-                    <li><a href="#">SHOP</a></li>
+                    <li v-for="link in links" :key="link.id">
+                        <a
+                            :href="link.url"
+                            :class="{'active': link.active }"
+                            >
+                            {{ link.text }}</a>
+                    </li>
                 </ul>
             </nav>
         </div>
@@ -25,45 +22,56 @@
 <script>
 export default {
     name: 'HeaderItem',
+    data(){
+        return {
+            links:[
+                {id:1, url:'#', text:'CHARACTERS', active: false},
+                {id:2, url:'#', text:'COMICS', active: false},
+                {id:3, url:'#', text:'MOVIES', active: false},
+                {id:4, url:'#', text:'TV', active: false},
+                {id:5, url:'#', text:'GAMES', active: false},
+                {id:6, url:'#', text:'COLLECTIBLES', active: false},
+                {id:7, url:'#', text:'VIDEOS', active: false},
+                {id:8, url:'#', text:'FANS', active: false},
+                {id:9, url:'#', text:'NEWS', active: false},
+                {id:10, url:'#', text:'SHOP', active: false},
+            ]
+        }
+    }
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
     header {
         background-color: #fff;
         height: 100px;
-    }
-    header .container {
-        height: 100%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    header figure img {
-        display: block;
-    }
-
-    header nav ul {
-        display: flex;
-    }
-    header ul li {
-        line-height: 100px;
-        margin-left: 30px;
-    }
-
-    header ul li:hover {
-        box-shadow: 0px -4px 0px #0282F9 inset;
-    }
-
-    header ul a {
-        font-size: 12px;
-        font-weight: bold;
-        transition: color 0.3s;
-    }
-
-    header ul a.active,
-    header ul a:hover {
-        color: #0282F9;
+        .container {
+            height: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        figure img {
+            display: block;
+        }
+        nav ul {
+            display: flex;
+            li {
+                line-height: 100px;
+                margin-left: 30px;
+            }
+            li:hover {
+                box-shadow: 0px -4px 0px #0282F9 inset;
+            }
+            a {
+                font-size: 12px;
+                font-weight: bold;
+                transition: color 0.3s;
+            }
+            a.active,
+            a:hover {
+                color: #0282F9;
+            }
+        }
     }
 </style>
