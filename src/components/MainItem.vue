@@ -47,7 +47,7 @@ export default {
         position: relative;
         h3 {
             display: inline-block;
-            padding: 8px;
+            padding: 8px 15px;
             color: white;
             background-color: #0282F9;
             position: absolute;
