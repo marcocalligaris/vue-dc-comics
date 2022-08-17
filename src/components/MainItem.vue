@@ -3,10 +3,17 @@
         <div id="jumbotron"></div>
         <section>
             <div class="container" id="current-series">
-                <div>
+                <div id="series-header">
                 <h3>CURRENT SERIES</h3>
+                <div id="series-gallery">
+                    <div v-for="(item, index) in gallery" :key="index" class="media-card">
+                        <a href="#">
+                                <img :src="(item.thumb)" :alt="(item.series)">
+                                <p>{{ item.series }}</p>
+                        </a>
+                    </div>
+                </div>                
                 </div>
-                <h1>--> Content goes here</h1>
             </div>
         </section>
         <section id="banner">
@@ -23,22 +30,52 @@
 
 <script>
 export default {
-    name: 'MainItem',
+    name: "MainItem",
+    props: {
+        gallery: Array,
+    }
 }
 </script>
 
 <style lang="scss" scoped>
-    main {
-        color: white;
-        #jumbotron {
-            background-image: url(../assets/img/jumbotron.jpg);
-            background-size: cover;
-            height: 400px;
-        }
-
+    #jumbotron {
+       background-image: url(../assets/img/jumbotron.jpg);
+        background-size: cover;
+        height: 400px;
     }
-
-
+    #series-header {
+        position: relative;
+        h3 {
+            display: inline-block;
+            padding: 8px;
+            color: white;
+            background-color: #0282F9;
+            position: absolute;
+            transform: translateY(-50%);
+        };
+    };
+    #series-gallery {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 30px 0;
+        .media-card {
+            width: calc(100% / 6);
+            padding: 15px;
+            // text-align: center;
+            img {
+                width: 200px;
+                height: 200px;
+                object-fit: fill;
+                margin-bottom: 20px;
+            };
+            p {
+                color: white;
+                font-size: 0.9rem;
+                text-transform: uppercase;
+                margin-bottom: 20px;
+            }
+        };
+    };
     #banner {
         padding: 40px 0;
         height: 150px;

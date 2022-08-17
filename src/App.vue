@@ -1,7 +1,7 @@
 <template>
   <div>
-    <HeaderItem />
-    <MainItem />
+    <HeaderItem :links="headerMenu" />
+    <MainItem :gallery="dcComicsData" />
     <FooterItem />
   </div>
 </template>
@@ -10,6 +10,7 @@
 import HeaderItem from './components/HeaderItem.vue';
 import MainItem from './components/MainItem.vue';
 import FooterItem from './components/FooterItem.vue';
+import json from './assets/js/dc-comics.json';
 export default {
   name: 'DcComics',
   components: {
@@ -17,7 +18,24 @@ export default {
     MainItem,
     FooterItem,
   },
-}
+  data() {
+    return {
+      headerMenu:[
+        {id:1, url:'#', text:'CHARACTERS', active: false},
+        {id:2, url:'#', text:'COMICS', active: false},
+        {id:3, url:'#', text:'MOVIES', active: false},
+        {id:4, url:'#', text:'TV', active: false},
+        {id:5, url:'#', text:'GAMES', active: false},
+        {id:6, url:'#', text:'COLLECTIBLES', active: false},
+        {id:7, url:'#', text:'VIDEOS', active: false},
+        {id:8, url:'#', text:'FANS', active: false},
+        {id:9, url:'#', text:'NEWS', active: false},
+        {id:10, url:'#', text:'SHOP', active: false},
+      ],
+      dcComicsData: json,
+    }
+  },
+};
 </script>
 
 <style>
@@ -30,7 +48,6 @@ export default {
 
   body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    min-height: 100vh;
     background-color: black;
   }
 
