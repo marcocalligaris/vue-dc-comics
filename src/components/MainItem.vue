@@ -14,6 +14,9 @@
                     </div>
                 </div>                
                 </div>
+                <div class="btn">
+                    <button id="load-btn">LOAD MORE</button>
+                </div>
             </div>
         </section>
         <section id="banner">
@@ -43,37 +46,50 @@ export default {
         background-size: cover;
         height: 400px;
     }
-    #series-header {
+    #current-series {
         position: relative;
-        h3 {
-            display: inline-block;
-            padding: 8px 15px;
-            color: white;
-            background-color: #0282F9;
-            position: absolute;
-            transform: translateY(-50%);
-        };
-    };
-    #series-gallery {
-        display: flex;
-        flex-wrap: wrap;
-        padding: 30px 0;
-        .media-card {
-            width: calc(100% / 6);
-            padding: 15px;
-            // text-align: center;
-            img {
-                width: 200px;
-                height: 200px;
-                object-fit: fill;
-                margin-bottom: 20px;
-            };
-            p {
+        padding-bottom: 30px;
+        #series-header {
+            // position: relative;
+            h3 {
+                display: inline-block;
+                padding: 8px 15px;
                 color: white;
-                font-size: 0.9rem;
-                text-transform: uppercase;
-                margin-bottom: 20px;
-            }
+                background-color: #0282F9;
+                position: absolute;
+                transform: translateY(-50%);
+            };
+        };
+        #series-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 30px 0;
+            .media-card {
+                width: calc(100% / 6);
+                padding: 15px;
+                img {
+                    width: 200px;
+                    height: 200px;
+                    object-fit: fill;
+                    margin-bottom: 20px;
+                };
+                p {
+                    color: white;
+                    font-size: 0.9rem;
+                    text-transform: uppercase;
+                    margin-bottom: 20px;
+                }
+            };
+        };
+        .btn {
+            display: flex;
+            justify-content: center;
+            #load-btn {
+                color: white;
+                font-weight: bold;
+                padding: 12px 60px;
+                background-color: #0282F9;
+            };
         };
     };
     #banner {
