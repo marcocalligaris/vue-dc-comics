@@ -1,8 +1,14 @@
 <template>
   <div>
     <HeaderItem :links="headerMenu" />
-    <MainItem :gallery="dcComicsData" />
-    <FooterItem />
+    <MainItem :gallery="dcComicsData" :bannerMenu="bannerMenu" />
+    <FooterItem 
+    :footerDcComicsMenu="footerDcComicsMenu"
+    :footerShopMenu="footerShopMenu"
+    :footerDcMenu="footerDcMenu"
+    :footerSitesMenu="footerSitesMenu"
+    :footerSocialMenu="footerSocialMenu"
+    />
   </div>
 </template>
 
@@ -33,6 +39,88 @@ export default {
         {id:10, url:'#', text:'SHOP', active: false},
       ],
       dcComicsData: json,
+      bannerMenu:[
+        {id:1, 
+        src: require('./assets/img/buy-comics-digital-comics.png'), 
+        text: 'DIGITAL COMICS', url: '#'
+        },
+        {id:1, 
+        src: require('./assets/img/buy-comics-merchandise.png'), 
+        text: 'DC MERCHANDISE', url: '#'
+        },
+        {id:1, 
+        src: require('./assets/img/buy-comics-subscriptions.png'), 
+        text: 'SUBSCRIPTION', url: '#'
+        },
+        {id:1, 
+        src: require('./assets/img/buy-comics-shop-locator.png'), 
+        text: 'SHOP LOCATOR', url: '#'
+        },
+        {id:1, 
+        src: require('./assets/img/buy-dc-power-visa.svg'), 
+        text: 'DC POWER VISA', url: '#'
+        },
+      ],
+      footerDcComicsMenu: [
+        {id:1, url:'#', text:'Characters'},
+        {id:2, url:'#', text:'Comics'},
+        {id:3, url:'#', text:'Movies'},
+        {id:4, url:'#', text:'TV'},
+        {id:5, url:'#', text:'Games'},
+        {id:6, url:'#', text:'Videos'},
+        {id:7, url:'#', text:'News'},
+      ],
+      footerShopMenu: [
+        {id:1, url:'#', text:'Shop DC'},
+        {id:2, url:'#', text:'Shop DC Collectibles'},
+      ],
+      footerDcMenu: [
+        {id:1, url:'#', text:'Terms Of Use'},
+        {id:2, url:'#', text:'Privacy policy (New)'},
+        {id:3, url:'#', text:'Ad Choices'},
+        {id:4, url:'#', text:'Advertising'},
+        {id:5, url:'#', text:'Jobs'},
+        {id:6, url:'#', text:'Subscriptions'},
+        {id:7, url:'#', text:'Talent Workshops'},
+        {id:8, url:'#', text:'CPSC Certificates'},
+        {id:9, url:'#', text:'Ratings'},
+        {id:10, url:'#', text:'Shop Help'},
+        {id:11, url:'#', text:'Contact Us'},
+      ],
+      footerSitesMenu: [
+        {id:1, url:'#', text:'DC'},
+        {id:2, url:'#', text:'MAD Magazine'},
+        {id:3, url:'#', text:'DC Kids'},
+        {id:4, url:'#', text:'DC Universe'},
+        {id:5, url:'#', text:'DC Power Visa'},
+      ],
+      footerSocialMenu: [
+        {id:1, 
+        url: '#', 
+        src: require('./assets/img/footer-facebook.png'), 
+        text: 'Facebook logo'
+        },
+        {id:2, 
+        url: '#', 
+        src: require('./assets/img/footer-twitter.png'), 
+        text: 'Twitter logo'
+        },
+        {id:3, 
+        url: '#', 
+        src: require('./assets/img/footer-youtube.png'), 
+        text: 'Youtube logo'
+        },
+        {id:4, 
+        url: '#', 
+        src: require('./assets/img/footer-pinterest.png'), 
+        text: 'Pinterest logo'
+        },
+        {id:5, 
+        url: '#', 
+        src: require('./assets/img/footer-periscope.png'), 
+        text: 'Periscope logo'
+        },
+      ],
     }
   },
 };
