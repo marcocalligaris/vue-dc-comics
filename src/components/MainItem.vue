@@ -20,23 +20,20 @@
             </div>
         </section>
         <section id="banner">
-            <div class="container">
-                <nav>
-                    <ul>
-                        <li></li>
-                    </ul>
-                </nav>
-            </div>
+                <BannerItem :bannerMenu="bannerMenu" />
         </section>
     </main>
 </template>
 
 <script>
+import BannerItem from './BannerItem.vue';
 export default {
     name: "MainItem",
     props: {
         gallery: Array,
-    }
+        bannerMenu: Array,
+    },
+    components: { BannerItem }
 }
 </script>
 
@@ -50,7 +47,6 @@ export default {
         position: relative;
         padding-bottom: 30px;
         #series-header {
-            // position: relative;
             h3 {
                 display: inline-block;
                 padding: 8px 15px;
@@ -93,8 +89,6 @@ export default {
         };
     };
     #banner {
-        padding: 40px 0;
-        height: 150px;
         background-color: #0282F9;
         position: relative;
     }
